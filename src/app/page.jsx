@@ -8,6 +8,8 @@ import Section4 from "@/components/Section4/Section4";
 import Section5 from "@/components/Section5/Section5";
 import Section6 from "@/components/Section6/Section6";
 import { Poppins } from "next/font/google";
+import Section7 from "@/components/Section7/Section7";
+import Section8 from "@/components/Section8/Section8";
 
 const poppins = Poppins({
   weight: "500",
@@ -17,7 +19,7 @@ const poppins = Poppins({
 export default function Home() {
   return (
     <main
-      className={`${poppins.className} min-h-screen w-full text-black" id="mainBox`}
+      className={`${poppins.className} max-h-screen w-full text-black" id="mainBox`}
     >
       <Navbar />
       <Section1 />
@@ -26,6 +28,8 @@ export default function Home() {
       <Section4 />
       <Section5 />
       <Section6 />
+      <Section7 />
+      <Section8 />
     </main>
   );
 }

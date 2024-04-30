@@ -62,64 +62,61 @@ const Section3 = () => {
           scrub: true,
         },
       });
-      // gsap.from("#cards", {
-      //   y: 200,
-      //   ease: "power1",
-      //   scrollTrigger: {
-      //     trigger: "#cards",
-      //     start: "bottom bottom",
-      //     end: "top 100%",
-      //     // scrub: true,
-      //   },
-      // });
+
+      cardsData.forEach((card, index) => {
+        const cardId = `#card-${index}`;
+
+        gsap.from(cardId, {
+          opacity: 0,
+          y: 200,
+          duration: 1,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: cardId,
+            start: "bottom bottom",
+            end: "top 70%",
+            scrub: true,
+          },
+        });
+      });
     },
     { scope: scrollRef },
     []
   );
   return (
-    <div className="w-full min-h-[100vh] p-20" ref={scrollRef}>
-      <div>
-        <h2
-          className={`${josefin.className} font-extrabold text-center text-4xl`}
-          id="text2"
-        >
-          Continuous Support for Your Success
-        </h2>
-        <div className="h-full flex justify-center gap-3 mt-5" id="cards">
-          {cardsData.map((card, index) => (
-            <div
-              key={index}
-              className="max-w-sm h-full overflow-hidden m-4 bg-blue-500 w-full bg-opacity-20 rounded-lg shadow-lg backdrop-blur-md border border-white border-opacity-30"
-            >
-              <Image
-                className="w-full h-56 object-cover"
-                src={card.imageSrc}
-                alt={card.alt}
-                width={500}
-                height={500}
-              />
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{card.title}</div>
-                <p
-                  className="text-gray-700 text-base h-36"
-                  style={{
-                    overflowY: "auto",
-                    scrollbarWidth: "thin",
-                    scrollbarColor: "#1d4ed8 #3b82f6",
-                    WebkitOverflowScrolling: "touch",
-                    scrollBehavior: "smooth",
-                    scrollbarGutter: "stable",
-                  }}
-                >
-                  {card.description}
-                </p>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-                  {card.buttonLabel}
-                </button>
-              </div>
+    <div className="w-full p-5" ref={scrollRef}>
+      <h2
+        className={`${josefin.className} font-extrabold text-center text-4xl`}
+        id="text2"
+      >
+        Continuous Support for Your Success
+      </h2>
+      <div
+        className="h-full w-full flex-wrap lg:flex-nowrap flex justify-center gap-3 mt-5"
+        id="cards"
+      >
+        {cardsData.map((card, index) => (
+          <div
+            key={index}
+            id={`card-${index}`}
+            className="max-w-sm h-auto overflow-hidden m-4 bg-blue-500 w-full bg-opacity-20 rounded-lg shadow-lg backdrop-blur-md border border-white border-opacity-30"
+          >
+            <Image
+              className="w-full h-56 object-cover"
+              src={card.imageSrc}
+              alt={card.alt}
+              width={500}
+              height={500}
+            />
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">{card.title}</div>
+              <p className="text-gray-700 h-36 text-sm">{card.description}</p>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-7">
+                {card.buttonLabel}
+              </button>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

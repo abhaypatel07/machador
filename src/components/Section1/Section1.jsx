@@ -53,11 +53,11 @@ const Section1 = () => {
   }, []);
   return (
     <div className="relative flex justify-center items-center w-full h-[100vh]">
-      <div className="absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/3 w-[80%] hover:w-full hover:z-50 text-6xl opacity-50  tracking-tighter hover:tracking-wide hover:opacity-100 hover:mt-5  transition-all">
-        <p className={`${josefin.className} text-black text-center`}>
+      <div className="absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/3 w-[100%] xl:w-[80%] hover:w-full hover:z-50 text-6xl opacity-50  tracking-tighter hover:tracking-wide hover:opacity-100 hover:mt-5  transition-all">
+        <p className={`${josefin.className} text-black text-center z-20`}>
           Empower Your Onboarding Experience
         </p>
-        <p className={`${josefin.className} text-black text-center `}>
+        <p className={`${josefin.className} text-black text-center z-20`}>
           with <span className="text-blue-700">AI</span> in Record Time
         </p>
       </div>
@@ -109,7 +109,7 @@ const Section1 = () => {
         className="absolute top-[50%] left-[75%]"
         id="scale"
       />
-      <div className="flex flex-col absolute bottom-5 left-5 w-[19%]">
+      <div className="flex flex-col absolute -bottom-5 lg:bottom-5 left-5 w-auto lg:w-[19%]">
         <p
           className={`${jersey.className} text-left tracking-tighter text-xl w-[70%] p-2`}
         >

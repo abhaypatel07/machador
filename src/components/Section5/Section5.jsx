@@ -51,11 +51,11 @@ const Section5 = () => {
   );
 
   return (
-    <div className="w-full min-h-[100vh] p-20" ref={scrollRef}>
-      <div className="bg-blue-500 w-full bg-opacity-20 rounded-lg shadow-lg backdrop-blur-md border border-white border-opacity-30 py-24 sm:py-32">
+    <div className="w-full min-h-[100vh] p-10 lg:p-20" ref={scrollRef}>
+      <div className="bg-blue-500 w-full bg-opacity-20 rounded-lg shadow-lg backdrop-blur-md border border-white border-opacity-30 lg:py-24 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">SAVE TIME AND MONEY
+          <div className="mx-auto max-w-2xl lg:text-center text-center">
+          <h2 className="text-base font-semibold leading-7 text-indigo-600 mt-3">SAVE TIME AND MONEY
           </h2>
           <h2
             className={`${josefin.className} font-extrabold text-center text-4xl`}

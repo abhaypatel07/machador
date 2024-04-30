@@ -8,8 +8,9 @@ const Hero = () => {
   const modelRef = useRef();
 
   return (
-    <div className="flex justify-center items-center h-full w-[50%]"
-     style={{
+    <div
+      className="flex justify-center items-center h-[80%] lg:h-full w-[100%] xl:w-[70%] z-20"
+      style={{
         background:
           "radial-gradient(circle, rgba(16, 163, 209, 0.5) 0%, rgba(16, 163, 209, 0) 70%)",
       }}

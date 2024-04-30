@@ -79,11 +79,11 @@ const Section6 = () => {
   );
 
   return (
-    <div className="w-full min-h-[100vh] p-20" ref={scrollRef}>
-      <div className="py-24 sm:py-32">
+    <div className="w-full min-h-[100vh] p-10 lg:p-20" ref={scrollRef}>
+      <div className="bg-blue-500 w-full bg-opacity-20 rounded-lg shadow-lg backdrop-blur-md border border-white border-opacity-30 lg:py-24 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">Pricing
+          <div className="mx-auto max-w-2xl lg:text-center text-center">
+          <h2 className="text-base font-semibold leading-7 text-indigo-600 mt-3">Pricing
           </h2>
           <h2
             className={`${josefin.className} font-extrabold text-center text-4xl`}
@@ -129,12 +129,12 @@ const Section6 = () => {
                                     selectedPlan.steps.map((step) =>
                                     <li className="flex gap-x-3">
                                       <svg className="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                                       </svg>
                                       {step}
                                     </li>
                                     )
-                                  }
+                                  } 
                                 </ul>
                               </div>
                               <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">

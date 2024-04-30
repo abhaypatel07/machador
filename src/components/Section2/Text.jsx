@@ -43,12 +43,12 @@ function Text() {
 
   return (
     <>
-      <div className="relative flex justify-center items-center w-[40%] h-full bg-gradient-radial">
+      <div className="relative flex justify-center items-center w-[100%] lg:w-[80%] h-full bg-gradient-radial">
         <div className="reveal">
           <div ref={triggerRef}>
             {text.split("").map((letter, index) => (
               <span
-                className={`${josefin.className} text-gray-500 font-thin text-3xl reveal-text`}
+                className={`${josefin.className} text-gray-300 font-thin text-2xl reveal-text`}
                 key={index}
                 ref={setLettersRef}
               >

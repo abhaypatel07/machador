@@ -9,8 +9,8 @@ const Hero = () => {
 
   return (
     <div
-      className="flex justify-center items-center h-[100vh] w-[60%]">
-      <Canvas className="flex justify-center items-center">
+      className="flex justify-center items-center lg:h-[50vh] w-[80vw] lg:w-[30%]">
+      <Canvas className="flex justify-center items-center w-[100%]">
         <ambientLight position={[0, 0, 0]} intensity={1} />
         <OrbitControls
           minPolarAngle={Math.PI / 6}
@@ -20,8 +20,8 @@ const Hero = () => {
         <Suspense fallback={null}>
           <group
             ref={modelRef}
-            scale={[2.1, 2.1, 2.1]}
-            position={[0, -2, 0]}
+            scale={[1.9, 1.9, 1.9]}
+            position={[0, -1, 0]}
           >
             <Modelfirst />
           </group>

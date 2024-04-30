@@ -10,13 +10,13 @@ const Navbar = () => {
       y: -100,
       opacity: 0,
       duration: 1.5,
-      delay: 1,
+      delay: 0,
     });
   }, []);
 
   return (
     <div
-      className="w-full h-[95px] p-3 flex justify-center fixed z-10"
+      className="w-full h-[95px] p-3 flex justify-center fixed z-30"
       id="navBar"
     >
       <div className="w-[90%] rounded-md flex justify-between px-6 items-center bg-white shadow-md">

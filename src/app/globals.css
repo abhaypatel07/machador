@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    background: conic-gradient(
+        from 0deg at calc(500% / 6) calc(100% / 3),
+        rgba(255,255,255,0.2) 0 120deg,
+        rgba(0,0,0,0) 0
+      ),
+      conic-gradient(
+        from -120deg at calc(100% / 6) calc(100% / 3),
+        rgba(0,213,187,0.2) 0 120deg,
+        rgba(0,0,0,0) 0
+      ),
+      conic-gradient(
+        from 120deg at calc(100% / 3) calc(500% / 6),
+        rgba(16,163,209,0.2) 0 120deg,
+        rgba(0,0,0,0) 0
+      ),
+      conic-gradient(
+        from 120deg at calc(200% / 3) calc(500% / 6),
+        rgba(16,163,209,0.2) 0 120deg,
+        rgba(0,0,0,0) 0
+      ),
+      conic-gradient(
+        from -180deg at calc(100% / 3) 50%,
+        rgba(0,213,187,0.2) 60deg,
+        rgba(16,163,209,0.2) 0 120deg,
+        rgba(0,0,0,0) 0
+      ),
+      conic-gradient(
+        from 60deg at calc(200% / 3) 50%,
+        rgba(16,163,209,0.2) 60deg,
+        rgba(255,255,255,0.2) 0 120deg,
+        rgba(0,0,0,0) 0
+      ),
+      conic-gradient(
+        from -60deg at 50% calc(100% / 3),
+        rgba(16,163,209,0.2) 120deg,
+        rgba(0,213,187,0.2) 0 240deg,
+        rgba(255,255,255,0.2) 0
+      );  
+}

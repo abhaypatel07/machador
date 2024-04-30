@@ -63,22 +63,7 @@ const Section3 = () => {
         },
       });
 
-      cardsData.forEach((card, index) => {
-        const cardId = `#card-${index}`;
-
-        gsap.from(cardId, {
-          opacity: 0,
-          y: 200,
-          duration: 1,
-          ease: "power1.inOut",
-          scrollTrigger: {
-            trigger: cardId,
-            start: "bottom bottom",
-            end: "top 70%",
-            scrub: true,
-          },
-        });
-      });
+      
     },
     { scope: scrollRef },
     []
@@ -98,7 +83,6 @@ const Section3 = () => {
         {cardsData.map((card, index) => (
           <div
             key={index}
-            id={`card-${index}`}
             className="max-w-sm h-auto overflow-hidden m-4 bg-blue-500 w-full bg-opacity-20 rounded-lg shadow-lg backdrop-blur-md border border-white border-opacity-30"
           >
             <Image

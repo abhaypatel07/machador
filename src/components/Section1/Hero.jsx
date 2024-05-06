@@ -1,5 +1,5 @@
 "use client";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas} from "@react-three/fiber";
 import React, { Suspense, useRef } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { Robo } from "./robo";
@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <div
-      className="flex justify-center items-center h-[80%] lg:h-full w-[100%] xl:w-[70%] z-20"
+      className="flex justify-center items-center h-[60vh] md:h-[80%] xl:h-[90%] w-[100%] xl:w-[70%] z-20"
       style={{
         background:
           "radial-gradient(circle, rgba(16, 163, 209, 0.5) 0%, rgba(16, 163, 209, 0) 70%)",

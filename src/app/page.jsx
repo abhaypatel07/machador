@@ -1,15 +1,15 @@
 "use client";
-import Hero from "@/components/Section1/Hero";
+import BenefitsAndAdvantages from "@/components/BenefitsAndAdvantages/BenefitsAndAdvantages";
+import Footer from "@/components/Footer/Footer";
+import GDPRCompliance from "@/components/GDPRCompliance/GDPRCompliance";
+import IntroductoryScene from "@/components/IntroductoryScene/IntroductoryScene";
+import MachadorSolution from "@/components/MachadorSolution/MachadorSolution";
 import Navbar from "@/components/Navbar";
+import ProblemIllustration from "@/components/ProblemIllustration/ProblemIllustration";
 import Section1 from "@/components/Section1/Section1";
-import Section2 from "@/components/Section2/Section2";
-import Section3 from "@/components/Section3/Section3";
-import Section4 from "@/components/Section4/Section4";
-import Section5 from "@/components/Section5/Section5";
 import Section6 from "@/components/Section6/Section6";
 import { Poppins } from "next/font/google";
-import Section7 from "@/components/Section7/Section7";
-import Section8 from "@/components/Section8/Section8";
+import { useEffect } from "react";
 
 const poppins = Poppins({
   weight: "500",
@@ -17,19 +17,25 @@ const poppins = Poppins({
 });
 
 export default function Home() {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
   return (
     <main
-      className={`${poppins.className} max-h-screen w-full text-black" id="mainBox`}
+      className={`${poppins.className} max-w-[100vw] overflow-hidden w-full text-black" id="mainBox`}
     >
       <Navbar />
       <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
+      <IntroductoryScene />
+      <ProblemIllustration />
+      <MachadorSolution />
+      <GDPRCompliance />
+      <BenefitsAndAdvantages />
       <Section6 />
-      <Section7 />
-      <Section8 />
+      <Footer />
     </main>
   );
 }
